@@ -1,0 +1,2 @@
+# SyntecNewWeb
+syntec new web
