@@ -1,0 +1,21 @@
+body{margin: 0;padding: 0;width: 100%;height: auto;margin: auto;color: #6b7485;
+font-family: '文泉驛微米黑 Regular', '文泉驛微米黑','Arial Negreta cursiva', 'Arial','微軟正黑體';
+background:url(../images/layout/pattern.png);-webkit-font-smoothing:antialiased;font-size: 15px;}
+
+span{font-size: 15px;}
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video{margin: 0;padding: 0;border: 0;transition:opacity .2s ease,color .2s ease,background .2s ease,box-shadow .2s ease,border .2s ease;font-family: '微軟正黑體';font-weight: 400;}
+ *:focus { outline: none; }
+a{text-decoration: none;color: #6b7485;}
+
+.limit{width: 1024px;margin: auto;}
+.header{background: #262626;width: 100%; min-width: 1024px; height:100px;}
+	.logo{background-image: url(../images/logo.jpg);width: 190px; height: 45px; background-size: 190px auto; background-repeat: no-repeat;float: left;margin-top: 35px;}
+	.menu{float: left; margin-top: 35px;margin-left: 15px;}
+		.listOfMenu{}
+		.listOfMenu a{float: left;padding-top:15px;}
+		.listOfMenu li{list-style: none;display: inline;color: #ffffff;font-size: 18px;border-right: 1px solid #ffffff;padding:15px;position: relative;}
+		.listOfMenu li:hover{color: #00a2e8;}
+			.butBar{width: 0px;height: 3px;background-color: #00a2e8;float: left;margin-top: 23px;margin-left: 2px;transition: all .3s;-webkit-transition: all .3s;}
+		
+.content{width: 100%;min-width: 1024px;max-height:800px;min-height:500px;}
+	.myContent{width: 100%;max-height:800px;min-height:500px;}

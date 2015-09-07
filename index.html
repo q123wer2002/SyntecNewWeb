@@ -1,0 +1,44 @@
+<!DOCTYPE>
+<html ng-app="Syntec">
+<head>
+	<meta charset="utf-8">
+	<!-- import AngularJS -->
+	<script type="text/javascript" src="js/angular.min.js"></script>
+
+	<!-- use man-made layout javascript -->
+	<script type="text/javascript" src="js/layout.js"></script>
+	
+	<!-- use man-made layout css -->
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<title>SyntecNewWeb</title>
+</head>
+<body>
+	<div class="layout" ng-controller="SyntecLayout">
+		<div class="header">
+			<div class="limit">
+				<div class="logo"></div>
+				<div class="menu">
+					<ul class="listOfMenu">
+						<a ng-repeat="m in menu" ng-if="m.name != 'IMAGE'" href="javascript:;" ng-click="showMyDetail(m)">
+							<li id="{{m.id}}">{{m.name}}</li>
+						</a>
+						<a ng-repeat="m in menu" ng-if="m.name == 'IMAGE'" href="javascript:;" ng-click="showMyDetail(m)">
+							<li id="{{m.id}}"><img src="{{m.url}}" width="16px"></li>
+						</a>
+					</ul>
+					<div class="butBar" ng-style="myBarSlide"></div>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="myContent" ng-controller="SyntecIndex">
+				<!-- load this page specific css and javascript -->
+				<link rel="stylesheet" type="text/css" href="css/index.css">
+				<script type="text/javascript" src="js/AN_index.js"></script>
+				<span class="bannerSlogon">{{slogon}}</span>
+			</div>
+		</div>
+		<div class="footer"></div>
+	</div>
+</body>
+</html>
