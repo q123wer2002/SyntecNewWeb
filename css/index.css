@@ -1,2 +1,2 @@
-.myContent{background-image: url(../images/index/banner1.jpg);background-repeat: no-repeat;background-size:auto 100%;width: 100%;height: auto;box-shadow: 3px 5px 5px #888888;position: relative;}
+.myContent{background-image: url(../images/index/banner1.jpg);background-repeat: no-repeat;background-size:100% auto;width: 100%;height: auto;box-shadow: 3px 5px 5px #888888;position: relative;}
 	.bannerSlogon{font-size: 25px;color: #ffffff;text-shadow: 2px 2px #000000;position: absolute;bottom: 20px; left: 70px;}
