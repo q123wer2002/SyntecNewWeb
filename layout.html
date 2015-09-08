@@ -19,10 +19,10 @@
 				<div class="logo"></div>
 				<div class="menu">
 					<ul class="listOfMenu">
-						<a ng-repeat="m in menu" ng-if="m.name != 'IMAGE'" href="javascript:;" ng-click="showMyDetail(m)">
+						<a ng-repeat="m in menu" ng-if="m.name != 'IMAGE'" href="javascript:;" ng-click="showMyDetail(m)" ng-blur='closeMyDetail()'>
 							<li id="{{m.id}}">{{m.name}}</li>
 						</a>
-						<a ng-repeat="m in menu" ng-if="m.name == 'IMAGE'" href="javascript:;" ng-click="showMyDetail(m)">
+						<a ng-repeat="m in menu" ng-if="m.name == 'IMAGE'" href="javascript:;" ng-click="showMyDetail(m)" ng-blur='closeMyDetail()'>
 							<li id="{{m.id}}"><img src="{{m.url}}" width="16px"></li>
 						</a>
 					</ul>

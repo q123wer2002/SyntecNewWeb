@@ -1,4 +1,4 @@
-body{margin: 0;padding: 0;width: 100%;height: auto;margin: auto;color: #6b7485;
+body{margin: 0;padding: 0;width: 100%;height: auto;margin: auto;color: #000000;
 font-family: '文泉驛微米黑 Regular', '文泉驛微米黑','Arial Negreta cursiva', 'Arial','微軟正黑體';
 background:url(../images/layout/pattern.png);-webkit-font-smoothing:antialiased;font-size: 15px;}
 
@@ -7,15 +7,18 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
  *:focus { outline: none; }
 a{text-decoration: none;color: #6b7485;}
 
+
 .limit{width: 1024px;margin: auto;}
 .header{background: #262626;width: 100%; min-width: 1024px; height:100px;}
 	.logo{background-image: url(../images/logo.jpg);width: 190px; height: 45px; background-size: 190px auto; background-repeat: no-repeat;float: left;margin-top: 35px;}
-	.menu{float: left; margin-top: 35px;margin-left: 15px;}
+	.menu{margin-left: 15px;float: left;margin-top: 15px;}
 		.listOfMenu{}
 		.listOfMenu a{float: left;padding-top:15px;}
-		.listOfMenu li{list-style: none;display: inline;color: #ffffff;font-size: 18px;border-right: 1px solid #ffffff;padding:15px;position: relative;}
+		.listOfMenu li{list-style: none;display: inline-table;color: #ffffff;font-size: 18px;border-right: 1px solid #ffffff;padding:15px;}
 		.listOfMenu li:hover{color: #00a2e8;}
-			.butBar{width: 0px;height: 3px;background-color: #00a2e8;float: left;margin-top: 23px;margin-left: 2px;transition: all .3s;-webkit-transition: all .3s;}
-		
-.content{width: 100%;min-width: 1024px;max-height:800px;min-height:500px;}
-	.myContent{width: 100%;max-height:800px;min-height:500px;}
+		.butBar{width: 0px;height: 3px;background-color: #00a2e8;float: left;margin-top: 13px;margin-left: 42px;transition: all .3s;-webkit-transition: all .3s;}
+		.searchBar{width: 140px;height: 30px;border:1px solid #ffffff;float: right;margin-top: 45px;padding: 0px 5px;border-radius: 3px;margin-right: 20px;position: relative;}
+			#titleSearchBar{width: 110px;font-size: 15px;background: #262626;color: #ffffff;border: none;position: absolute;left: 5px;top: 5px;}
+			#searchIcon{background-image: url(../images/searchIcon.png);width: 20px;height: 20px;margin:0;padding: 0;background-position: 0px 0px;position: absolute;background-size: 20px auto;background-repeat: no-repeat;top: 5px;right: 9px;}
+.content{width: 100%;min-width: 1024px;min-height:500px;}
+	.myContent{width: 100%; min-width:1024px; min-height:500px;}

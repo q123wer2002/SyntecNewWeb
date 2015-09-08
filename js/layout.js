@@ -8,7 +8,7 @@ Syntec.controller('SyntecLayout',['$scope','$http',function layout($scope,$http)
 		{"id":"menu_4", "name":"人才招募", "showDetail":false},
 		{"id":"menu_5", "name":"全球據點", "showDetail":false},
 		{"id":"menu_6", "name":"登入", "showDetail":false},
-		{"id":"menu_7", "name":"IMAGE","url":"images/IconBlack.ico", "showDetail":false}
+		{"id":"menu_7", "name":"IMAGE","url":"images/earth.png", "showDetail":false}
 	];
 
 	$scope.showMyDetail = function(item){
@@ -24,7 +24,10 @@ Syntec.controller('SyntecLayout',['$scope','$http',function layout($scope,$http)
 			}
 		}
 		totalLeft += 2;
-		console.log(totalLeft);
 		$scope.myBarSlide={"width":myWidth,"margin-left":totalLeft};
+	}
+
+	$scope.closeMyDetail = function(){
+		$scope.myBarSlide={"width":"0px","margin-left":"42px"};
 	}
 }]);
