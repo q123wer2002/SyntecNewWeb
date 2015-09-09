@@ -15,10 +15,14 @@ Syntec.controller('SyntecIndex',['$scope','$http',function index($scope,$http){
 		{"parent":"產品型錄", "name":"", "desID":"other_2", "description":"我們提供最完整的產品型錄，並且不定期更新<br>目前官方提供繁體中文、簡體中文、英文三種版本<br>歡迎進入此區瞭解更多產品資訊", "pictureURL":"images/index/productInfo.png", "linkURL":""}
 	];
 
+	$scope.botBanners=[
+		{"title":"專業研發團隊", "detail":"我們重視研發技術，每年在研發上投注大量資源，專業團隊共同努力，造就今日的成果。", "pictureURL":"images/index/RDTeam.jpg", "linkURL":""},
+		{"title":"成功案例", "detail":"至今新代科技合作與許多廠商共同做許多成功的技術開發，提供更完整的功能，有目共睹。", "pictureURL":"images/index/SuccEx.jpg", "linkURL":""}
+	];
+
 	$scope.trustedHtml = function () {
 		for(var i=0; i<$scope.topOthers.length; i++){
 			document.getElementById($scope.topOthers[i].desID).innerHTML = $scope.topOthers[i].description;
 		}
     }
-
 }]);

@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<!-- import AngularJS -->
 	<script type="text/javascript" src="js/angular.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular-sanitize.js"></script>
 
 	<!-- use man-made layout javascript -->
 	<script type="text/javascript" src="js/layout.js"></script>
@@ -19,10 +20,10 @@
 				<div class="logo"></div>
 				<div class="menu">
 					<ul class="listOfMenu">
-						<a ng-repeat="m in menu" ng-if="m.name != 'IMAGE'" href="javascript:;" ng-focus="showMyDetail(m)" ng-blur='closeMyDetail()'>
+						<a ng-repeat="m in menu" ng-if="m.name != 'IMAGE'" href="javascript:;" ng-focus="showMyDetail(m)" ng-blur='closeMyDetail(m)'>
 							<li id="{{m.id}}">{{m.name}}</li>
 						</a>
-						<a ng-repeat="m in menu" ng-if="m.name == 'IMAGE'" href="javascript:;" ng-focus="showMyDetail(m)" ng-blur='closeMyDetail()'>
+						<a ng-repeat="m in menu" ng-if="m.name == 'IMAGE'" href="javascript:;" ng-focus="showMyDetail(m)" ng-blur='closeMyDetail(m)'>
 							<li id="{{m.id}}" style="border-right: 1px solid #ffffff;"><img src="{{m.url}}" width="20px"></li>
 						</a>
 					</ul>
@@ -32,7 +33,18 @@
 					<input id="titleSearchBar" placeholder="search" ng-focus="searchBarStyle={'border-color':'#00a2e8'}" ng-blur="searchBarStyle={'border-color':'#ffffff'}">
 					<a href="javascript:;"><span id="searchIcon"></span></a>
 				</div>
-				<div class="listOfDetailMenu"></div>
+				<div class="listOfDetailMenu" id="productList" ng-show="isShowProductList" ng-click="holdeProduct()">
+					<div style="width:1024px;margin:auto;height:100%;">
+						<div class="allMenu" ng-repeat="pMenu in productMenuTitles" id="{{pMenu.id}}">
+							<ul class="totalMenu">
+								<li><h3>{{pMenu.title}}</h3></li>
+								<a href="javascript:;" ng-repeat="subpMenu in productMenuSubNames" ng-if="subpMenu.pare_id == pMenu.id">
+									<li>{{subpMenu.name}}</li>
+								</a>
+							</ul>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="content">
@@ -64,36 +76,35 @@
 								<p class="otherTitle">{{other.parent}}</p>
 								<img src="{{other.pictureURL}}" width="300px">
 								<p class="otherName" ng-show="other.name != ''">{{other.name}}</p>
-								<p class="otherdescrp" id="{{other.desID}}">{{other.description}}</p>
+								<p class="otherdescrp" ng-bind-html="other.description"></p>
 								<a href="javascript:;" class="otherMore">瞭解更多</a>
 							</li>
 						</ul>
 					</div>
 				</div>
-				<div class="botBanner" style="background-image: url(images/index/RDTeam.jpg);">
-					<h1></h1>
+				<div class="botBanner" ng-repeat="bBan in botBanners" style="background-image: url({{bBan.pictureURL}});">
+					<h1 class="botTitle">{{bBan.title}}</h1>
 					<div class="bbannerDetail">
-						<h2></h2>
-						<a href="javascript:;"></a>
+						<h3>{{bBan.detail}}</h3>
+						<a href="javascript:;">點此，看更多〉</a>
 					</div>
 				</div>
-				<div class="botBanner" style="background-image: url(images/index/SuccEx.jpg);">
-					<h1></h1>
-					<div class="bbannerDetail">
-						<h2></h2>
-						<a href="javascript:;"></a>
-					</div>
-				</div>
-				<div class="botBanner" style="background-image: url(images/index/contact.png);padding-top:50px;">
-					<h1></h1>
-					<div class="bbannerDetail">
-						<h2></h2>
-						<a href="javascript:;"></a>
-					</div>
-				</div>
+
+				<div style="background-image: url(images/index/contact.png);padding-top:50px;margin-bottom:0;height:320px;background-size: 100% 320px;"></div>
 			</div>
 		</div>
-		<div class="footer"></div>
+		<div class="footer">
+			<div class="fContent">
+				<span style="float:left;">台灣新代科技股份有限公司 / 苏州新代數控设备有限公司</span>
+				<span>Copyright &copy; 1995-2014 SYNTEC TECHNOLOGY CO.LTD</span>
+				<ul class="footerUl">
+					<a href="javascript:;"><li>隱私政策</li></a>
+					<a href="javascript:;"><li>使用條款</li></a>
+					<a href="javascript:;"><li>聯絡我們</li></a>
+				</ul>
+				<a href="javascript:;" style="position:absolute;right:0;top:13px;"><img src="images/index/likeFB.png" width="100px" /></a>
+			</div>
+		</div>
 	</div>
 </body>
 </html>
