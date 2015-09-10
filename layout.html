@@ -3,7 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<!-- import AngularJS -->
-	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/angular.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular-sanitize.js"></script>
 
 	<!-- use man-made layout javascript -->
 	<script type="text/javascript" src="js/layout.js"></script>
@@ -19,19 +20,46 @@
 				<div class="logo"></div>
 				<div class="menu">
 					<ul class="listOfMenu">
-						<a ng-repeat="m in menu" ng-if="m.name != 'IMAGE'" href="javascript:;" ng-click="showMyDetail(m)" ng-blur='closeMyDetail()'>
+						<a ng-repeat="m in menu" ng-if="m.name != 'IMAGE'" href="javascript:;" ng-focus="showMyDetail(m)" ng-blur='closeMyDetail(m)'>
 							<li id="{{m.id}}">{{m.name}}</li>
 						</a>
-						<a ng-repeat="m in menu" ng-if="m.name == 'IMAGE'" href="javascript:;" ng-click="showMyDetail(m)" ng-blur='closeMyDetail()'>
-							<li id="{{m.id}}"><img src="{{m.url}}" width="16px"></li>
+						<a ng-repeat="m in menu" ng-if="m.name == 'IMAGE'" href="javascript:;" ng-focus="showMyDetail(m)" ng-blur='closeMyDetail(m)'>
+							<li id="{{m.id}}" style="border-right: 1px solid #ffffff;"><img src="{{m.url}}" width="20px"></li>
 						</a>
 					</ul>
 					<div class="butBar" ng-style="myBarSlide"></div>
 				</div>
+				<div class="searchBar" ng-style="searchBarStyle">
+					<input id="titleSearchBar" placeholder="search" ng-focus="searchBarStyle={'border-color':'#00a2e8'}" ng-blur="searchBarStyle={'border-color':'#ffffff'}">
+					<a href="javascript:;"><span id="searchIcon"></span></a>
+				</div>
+				<div class="listOfDetailMenu" id="productList" ng-show="isShowProductList" ng-click="holdeProduct()">
+					<div style="width:1024px;margin:auto;height:100%;">
+						<div class="allMenu" ng-repeat="pMenu in productMenuTitles" id="{{pMenu.id}}">
+							<ul class="totalMenu">
+								<li><h3>{{pMenu.title}}</h3></li>
+								<a href="javascript:;" ng-repeat="subpMenu in productMenuSubNames" ng-if="subpMenu.pare_id == pMenu.id">
+									<li>{{subpMenu.name}}</li>
+								</a>
+							</ul>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="content"></div>
-		<div class="footer"></div>
+		<div class="footer">
+			<div class="fContent">
+				<span style="float:left;">台灣新代科技股份有限公司 / 苏州新代數控设备有限公司</span>
+				<span>Copyright &copy; 1995-2014 SYNTEC TECHNOLOGY CO.LTD</span>
+				<ul class="footerUl">
+					<a href="javascript:;"><li>隱私政策</li></a>
+					<a href="javascript:;"><li>使用條款</li></a>
+					<a href="javascript:;"><li>聯絡我們</li></a>
+				</ul>
+				<a href="javascript:;" style="position:absolute;right:0;top:13px;"><img src="images/index/likeFB.png" width="100px" /></a>
+			</div>
+		</div>
 	</div>
 </body>
 </html>

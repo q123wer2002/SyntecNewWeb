@@ -20,9 +20,15 @@ Syntec.controller('SyntecIndex',['$scope','$http',function index($scope,$http){
 		{"title":"成功案例", "detail":"至今新代科技合作與許多廠商共同做許多成功的技術開發，提供更完整的功能，有目共睹。", "pictureURL":"images/index/SuccEx.jpg", "linkURL":""}
 	];
 
-	$scope.trustedHtml = function () {
-		for(var i=0; i<$scope.topOthers.length; i++){
-			document.getElementById($scope.topOthers[i].desID).innerHTML = $scope.topOthers[i].description;
-		}
-    }
+	$scope.initcBanHei = function(){
+		var picWidth = 2398;
+		var picHeight = 716;
+		var winW = document.body.offsetWidth;
+ 		if(winW < 1024){winW = 1024;}
+
+ 		console.log(winW);
+
+ 		var fitHeight = (winW*picHeight)/picWidth;
+ 		document.getElementById("contantBanner").style.height = fitHeight;
+	}
 }]);
