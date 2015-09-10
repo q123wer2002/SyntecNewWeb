@@ -26,8 +26,6 @@ Syntec.controller('SyntecIndex',['$scope','$http',function index($scope,$http){
 		var winW = document.body.offsetWidth;
  		if(winW < 1024){winW = 1024;}
 
- 		console.log(winW);
-
  		var fitHeight = (winW*picHeight)/picWidth;
  		document.getElementById("contantBanner").style.height = fitHeight;
 	}
