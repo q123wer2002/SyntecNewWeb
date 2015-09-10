@@ -17,8 +17,9 @@
 			.otherName{font-weight: 700;font-size: 25px;;padding-top: 15px;}
 			.otherdescrp{padding-top: 15px;}
 			.otherMore{color: #ffffff;background-color: #5a5657;padding: 5px 12px;border-radius: 2px;position: absolute;right: 35px;bottom: 15px;}
-	.botBanner{width:100%;height:450px;background-size: 100% auto;background-repeat: no-repeat;margin: 50px 0px;min-width: 1024px;}
+	.botBanner{width:100%;height:380px;background-size: 100% auto;background-repeat: no-repeat;margin: 20px 0px;min-width: 1024px;position: relative;}
 		.botTitle{font-size: 50px;font-weight: 900;float: left;margin: 130px 0px 0px 50px;}
-		.bbannerDetail{background-color: #5a5657;opacity: 0.8;width: 40%;height: 50px;float: right;margin-top: 200px;padding: 30px 50px 70px 20px;}
-		.bbannerDetail h3{color: #ffffff;font-weight: 700;}
+		.bbannerDetail{background-color: #5a5657;opacity: 0.8;width: 40%;height: 50px;float: right;margin-top: 180px;padding: 30px 100px 70px 20px;position: relative;}
+		.bbannerDetail h3{color: #ffffff;font-weight: 500;}
 		.bbannerDetail a{color: #ffffff;font-size: 30px;float: right;}
+		.bbannerDetail img{opacity: 1;float: left;position: absolute;left: -50px;top: 0px;}

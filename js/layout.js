@@ -12,21 +12,21 @@ Syntec.controller('SyntecLayout',['$scope','$http',function layout($scope,$http)
 	];
 
 	$scope.productMenuTitles=[
-		{"id":"p6", "title":"其他產品"},
-		{"id":"p5", "title":"操作介面"},
-		{"id":"p3", "title":"控制器"},
-		{"id":"p1", "title":"產品型錄"},
-		{"id":"p2", "title":"伺服驅動器"},
-		{"id":"p4", "title":"自動化"}			
+		{"id":"p6", "title":"其他產品", "linkURL":""},
+		{"id":"p5", "title":"操作介面", "linkURL":""},
+		{"id":"p3", "title":"控制器", "linkURL":""},
+		{"id":"p1", "title":"產品型錄", "linkURL":"http://www.syntecclub.com.tw/2010/HTML/Product.aspx"},
+		{"id":"p2", "title":"伺服驅動器", "linkURL":""},
+		{"id":"p4", "title":"自動化", "linkURL":""}			
 	];
 
 	$scope.productMenuSubNames=[
 		//first
-		{"pare_id":"p1", "name":"高速高精控制器", "linkURL":""},
-		{"pare_id":"p1", "name":"SPD系列高性能驅動器", "linkURL":""},
-		{"pare_id":"p1", "name":"泛用自動化控制器", "linkURL":""},
-		{"pare_id":"p1", "name":"機械手臂控制器", "linkURL":""},
-		{"pare_id":"p1", "name":"6CA磨床控制器型錄", "linkURL":""},
+		{"pare_id":"p1", "name":"高速高精控制器", "linkURL":"http://www.syntecclub.com.tw/2010/HTML/UpDownFiles/Product_Manual/TypeCHT_635756741194680000.pdf"},
+		{"pare_id":"p1", "name":"SPD系列高性能驅動器", "linkURL":"http://www.syntecclub.com.tw/2010/HTML/UpDownFiles/Product_Manual/TypeCHT_635582110390781250.pdf"},
+		{"pare_id":"p1", "name":"泛用自動化控制器", "linkURL":"http://www.syntecclub.com.tw/2010/HTML/UpDownFiles/Product_Manual/TypeCHT_635651276195000000.pdf"},
+		{"pare_id":"p1", "name":"機械手臂控制器", "linkURL":"http://www.syntecclub.com.tw/2010/HTML/UpDownFiles/Product_Manual/TypeCHT_635669648622500000.pdf"},
+		{"pare_id":"p1", "name":"6CA磨床控制器型錄", "linkURL":"http://www.syntecclub.com.tw/2010/HTML/UpDownFiles/Product_Manual/TypeCHT_635316204019649840.pdf"},
 		//second
 		{"pare_id":"p2", "name":"SP系列主軸電機", "linkURL":""},
 		{"pare_id":"p2", "name":"7.5KW驅動器", "linkURL":""},
