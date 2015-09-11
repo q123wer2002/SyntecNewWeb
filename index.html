@@ -83,17 +83,17 @@
 						</ul>
 					</div>
 				</div>
-				<div class="botBanner" ng-repeat="bBan in botBanners" style="background-image: url({{bBan.pictureURL}});">
+				<div class="botBanner" ng-repeat="bBan in botBanners" style="background-image: url({{bBan.pictureURL}});height:{{botBannerHei}}px" ng-init="initcBanHei(2000,555,'scope')">
 					<h1 class="botTitle" ng-if="bBan.id==1" style="position:absolute;right:300px;top:-50px;">{{bBan.title}}</h1>
 					<h1 class="botTitle" ng-if="bBan.id==2" style="color:#ffffff;">{{bBan.title}}</h1>
-					<div class="bbannerDetail">
+					<div class="bbannerDetail" style="margin-top:{{botBannerHei/2}}px">
 						<img src="images/index/syntec LOGO.png" width="40px">
 						<h3>{{bBan.detail}}</h3>
 						<a href="javascript:;">點此，看更多〉</a>
 					</div>
 				</div>
 
-				<div id="contantBanner" style="background-image: url(images/index/contact.png);margin-bottom:0;padding-bottom:0;background-size: 100% auto;background-repeat:no-repeat" ng-init="initcBanHei()"></div>
+				<div id="contantBanner" style="background-image: url(images/index/contact.png);margin-bottom:0;padding-bottom:0;background-size: 100% auto;background-repeat:no-repeat" ng-init="initcBanHei(2398,716,'contantBanner')"></div>
 			</div>
 		</div>
 		<div class="footer">
